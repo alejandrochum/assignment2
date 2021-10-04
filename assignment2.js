@@ -37,3 +37,33 @@ Array.prototype.mySome = function(callback) {
     }
     return false;
 };
+
+// EVERY //
+Array.prototype.myEvery = function() {
+    for (let index = 0; index < this.length; index++) {
+        const element = this[index];
+        if (callback(element) === false) {
+            return false;
+        }
+    }
+    return true;
+};
+
+// REDUCE //
+Array.prototype.myReduce = function(callback) {
+    let res = arguments[1];
+    for (let index = 0; index < this.length; index++) {
+        const element = this[index];
+        res = callback(res, element);
+    }
+    return res;
+};
+
+// INCLUDES //
+Array.prototype.myIncludes = function(val) {
+    for (let index = 0; index < this.length; index++) {
+        if (this[index] === val)
+            return true;
+    }
+    return false;
+};
