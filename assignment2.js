@@ -58,3 +58,12 @@ Array.prototype.myReduce = function(callback) {
     }
     return res;
 };
+
+// INCLUDES //
+Array.prototype.myIncludes = function(val) {
+    for (let index = 0; index < this.length; index++) {
+        if (this[index] === val)
+            return true;
+    }
+    return false;
+};
