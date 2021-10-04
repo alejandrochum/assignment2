@@ -1,3 +1,6 @@
+//Xavier Chum
+//Assignment 2
+
 // For Each
 Array.prototype.myEach = function(callback) {
     for (let index = 0; index < this.length; index++) {
