@@ -50,6 +50,11 @@ Array.prototype.myEvery = function() {
 };
 
 // REDUCE //
-Array.prototype.myReduce = function() {
-
+Array.prototype.myReduce = function(callback) {
+    let res = arguments[1];
+    for (let index = 0; index < this.length; index++) {
+        const element = this[index];
+        res = callback(res, element);
+    }
+    return res;
 };
