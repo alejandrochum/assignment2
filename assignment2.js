@@ -80,3 +80,13 @@ Array.prototype.myIndexOf = function(val, startIndex) {
     }
     return -1;
 };
+
+// PUSH //
+Array.prototype.myPush = function(val) {
+    let res = this;
+    var args = arguments;
+    for (let index = 0; index < args.length; index++) {
+        res[res.length] = args[index];
+    }
+    return res;
+};
