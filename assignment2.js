@@ -90,3 +90,17 @@ Array.prototype.myPush = function(val) {
     }
     return res;
 };
+
+// LASTINDEXOF //
+Array.prototype.myLastIndexOf = function(val, startIndex) {
+    let res = -1;
+    if (startIndex === undefined) {
+        startIndex = 0;
+    }
+    for (let index = startIndex; index < this.length; index++) {
+        const element = this[index];
+        if (element === val)
+            res = index;
+    }
+    return res;
+};
