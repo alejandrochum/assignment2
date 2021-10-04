@@ -28,6 +28,12 @@ Array.prototype.myFilter = function(callback) {
 };
 
 // SOME //
-Array.prototype.mySome = function() {
-
+Array.prototype.mySome = function(callback) {
+    for (let index = 0; index < this.length; index++) {
+        const element = this[index];
+        if (callback(element) === true) {
+            return true;
+        }
+    }
+    return false;
 };
