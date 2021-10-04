@@ -104,3 +104,17 @@ Array.prototype.myLastIndexOf = function(val, startIndex) {
     }
     return res;
 };
+
+const object1 = {
+    a: 'somestring',
+    b: 42,
+    c: false
+};
+// KEYS //
+Object.grabKeys = function(object) {
+    var res = [];
+    for (const [key] of Object.entries(object)) {
+        res.push(`${key}`);
+    }
+    return res;
+};
