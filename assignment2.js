@@ -5,6 +5,13 @@ Array.prototype.myEach = function(callback) {
     }
 };
 
-const array1 = ['a', 'b', 'c'];
-array1.forEach(element => console.log(element));
-array1.myEach(element => console.log(element));
+// Map
+
+Array.prototype.myMap = function(callback) {
+    var res = [];
+    for (let index = 0; index < this.length; index++) {
+        const element = callback(this[index]);
+        res.push(element);
+    }
+    return res;
+};
