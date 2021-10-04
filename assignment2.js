@@ -48,3 +48,8 @@ Array.prototype.myEvery = function() {
     }
     return true;
 };
+
+// REDUCE //
+Array.prototype.myReduce = function() {
+
+};
