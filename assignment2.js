@@ -37,3 +37,14 @@ Array.prototype.mySome = function(callback) {
     }
     return false;
 };
+
+// EVERY //
+Array.prototype.myEvery = function() {
+    for (let index = 0; index < this.length; index++) {
+        const element = this[index];
+        if (callback(element) === false) {
+            return false;
+        }
+    }
+    return true;
+};
