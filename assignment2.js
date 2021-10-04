@@ -67,3 +67,16 @@ Array.prototype.myIncludes = function(val) {
     }
     return false;
 };
+
+// INDEXOF //
+Array.prototype.myIndexOf = function(val, startIndex) {
+    if (startIndex === undefined) {
+        startIndex = 0;
+    }
+    for (let index = startIndex; index < this.length; index++) {
+        const element = this[index];
+        if (element === val)
+            return index;
+    }
+    return -1;
+};
