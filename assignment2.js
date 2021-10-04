@@ -26,3 +26,8 @@ Array.prototype.myFilter = function(callback) {
     }
     return res;
 };
+
+// SOME //
+Array.prototype.mySome = function() {
+
+};
